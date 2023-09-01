@@ -6,7 +6,7 @@ function initAll() {
 }
 
 function novaCartela(){
-    for( let i = 0; i<24; i++){
+    for(let i = 0; i<24; i++){
         coloqueNum(i)
     }
 }
@@ -28,13 +28,14 @@ function coloqueNum(thisNum) {
         newNum = colunas + getNewNum() + 1;
     } while (uNumeros[newNum]);
 
+    uNumeros[newNum] = true
     document.getElementById(vNum).innerHTML = newNum;
     document.getElementById(vNum).className = "";
     document.getElementById(vNum).onmousedown = trocaCor;
 }
 
 function getNewNum() {
-    return Math.floor(Math.random()*15);
+    return(Math.floor(Math.random()*15));
 }
 
 function outraCartela() {
